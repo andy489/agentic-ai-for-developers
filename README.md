@@ -13,6 +13,13 @@ introduction-to-developing-ai-agents/
 └── returns-refunds-flow/                            # CrewAI Flow project
 ```
 
+## Notebooks
+
+### Introduction to Developing AI Agents
+
+- [01 — Introduction to Developing AI Agents](introduction-to-developing-ai-agents/01-introduction-to-developing-AI-agents.ipynb)
+- [02 — Customer Feedback Analysis with CrewAI](introduction-to-developing-ai-agents/02-customer-feedback-analysis-with-crewai.ipynb)
+
 ## Projects
 
 ### feedback-analysis-crew
