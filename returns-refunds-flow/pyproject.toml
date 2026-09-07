@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "returns-refunds-flow"
+version = "0.1.0"
+description = "CrewAI Flows-based returns and refunds processing system"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+crewai = {extras = ["tools"], version = ">=0.80.0,<1.0.0"}
+python-dotenv = ">=1.0.0"
+
+[tool.poetry.scripts]
+returns-refunds-flow = "returns_refunds_flow.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

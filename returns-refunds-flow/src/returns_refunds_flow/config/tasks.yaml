@@ -1,0 +1,56 @@
+validate_return_task:
+  description: >
+    A customer has submitted a return request. Carefully review the details
+    below and decide if this return is eligible under our policy.
+
+    Return Policy:
+    - Items must be returned within 30 days of purchase
+    - Items must be unworn and in original packaging
+    - Sale items marked as final sale are not eligible for return
+    - Defective items are always eligible regardless of condition
+
+    Customer Request:
+    {return_request}
+  expected_output: >
+    A structured eligibility decision with:
+    - Decision: APPROVED or REJECTED
+    - Reason: A clear one-paragraph explanation of why
+    - Policy rule applied: Which specific rule led to this decision
+  agent: return_validator
+
+process_refund_task:
+  description: >
+    The return request has been approved. Generate clear step-by-step
+    instructions for the customer explaining exactly what to do next.
+
+    Customer Request:
+    {return_request}
+
+    Approval reason:
+    {validation_result}
+  expected_output: >
+    A friendly, professional message to the customer that includes:
+    - Confirmation that the refund is approved
+    - Step-by-step return instructions (packaging, shipping label, address)
+    - Expected refund timeline (typically 5-7 business days after item received)
+    - A thank-you note for their patience
+  agent: refund_processor
+
+explain_denial_task:
+  description: >
+    The return request has been denied. Write a compassionate response to
+    the customer explaining why the return cannot be accepted, and offer
+    at least one helpful alternative.
+
+    Customer Request:
+    {return_request}
+
+    Denial reason:
+    {validation_result}
+  expected_output: >
+    A warm, empathetic message to the customer that includes:
+    - A sincere acknowledgement of their disappointment
+    - A clear explanation of the specific policy rule that applies
+    - At least one alternative offer (e.g. 10% discount, repair service)
+    - An invitation to contact support if they have further questions
+  agent: denial_agent

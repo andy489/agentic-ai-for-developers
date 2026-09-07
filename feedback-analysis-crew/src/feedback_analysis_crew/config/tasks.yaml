@@ -1,0 +1,32 @@
+sentiment_analysis_task:
+  description: >
+    Analyze the following customer feedback comments from Jenny's online shop.
+    For each comment, determine whether the sentiment is positive, negative, or neutral.
+    Then calculate the overall sentiment breakdown as percentages.
+
+    Customer feedback:
+    {feedback}
+  expected_output: >
+    A clear sentiment breakdown report including:
+    - Overall percentages: X% positive, Y% negative, Z% neutral
+    - A brief explanation of what is driving each sentiment category
+    - 2-3 representative quotes for each sentiment category
+  agent: sentiment_analyst
+
+theme_analysis_task:
+  description: >
+    Analyze the following customer feedback comments from Jenny's online shop.
+    Identify the main recurring themes and topics customers are discussing.
+    Group similar mentions together and rank themes by how frequently they appear.
+
+    Customer feedback:
+    {feedback}
+  expected_output: >
+    A structured list of the top 5 themes found in the feedback, each with:
+    - Theme name (e.g. "Shipping Speed", "Product Quality", "Customer Service")
+    - How many comments mention it (count and percentage)
+    - A short description of what customers are saying about this theme
+    - 1-2 representative quotes
+  agent: theme_analyst
+  context:
+    - sentiment_analysis_task
