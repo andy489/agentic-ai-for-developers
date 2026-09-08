@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Francisco Chaperone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gg-red:    #c0392b;
+      --gg-orange: #e74c3c;
+      --sky:       #2980b9;
+      --sky-light: #d6eaf8;
+      --bay:       #1a5276;
+      --sand:      #fef9f0;
+      --fog:       #f0f3f7;
+      --text:      #1c2a3a;
+      --muted:     #6b7c93;
+      --border:    #dce4ed;
+      --bubble-ai: #ffffff;
+      --bubble-user: #c0392b;
+      --shadow:    0 4px 32px rgba(28,42,58,0.10);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--fog);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image:
+        radial-gradient(ellipse at 20% 80%, rgba(192,57,43,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 10%, rgba(41,128,185,0.08) 0%, transparent 60%);
+    }
+
+    /* ── SETUP SCREEN ── */
+    #setup {
+      background: white;
+      border-radius: 24px;
+      padding: 48px 40px 40px;
+      box-shadow: var(--shadow);
+      width: 400px;
+      text-align: center;
+      animation: fadeUp 0.4s ease;
+    }
+
+    .setup-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--gg-red), var(--gg-orange));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 24px rgba(192,57,43,0.3);
+    }
+
+    #setup h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    #setup .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 14px;
+    }
+
+    .input-group .input-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    #setup input {
+      width: 100%;
+      padding: 14px 16px 14px 44px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: var(--sand);
+    }
+
+    #setup input:focus {
+      border-color: var(--gg-red);
+      box-shadow: 0 0 0 4px rgba(192,57,43,0.10);
+      background: white;
+    }
+
+    #setup input::placeholder { color: #aab4be; }
+
+    .btn-primary {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--gg-red), var(--gg-orange));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      box-shadow: 0 4px 16px rgba(192,57,43,0.3);
+    }
+
+    .btn-primary:hover  { opacity: 0.92; transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+
+    /* ── CHAT SCREEN ── */
+    #chat-container {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      max-width: 720px;
+      height: 92vh;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: fadeUp 0.4s ease;
+    }
+
+    /* Header */
+    #chat-header {
+      background: linear-gradient(135deg, var(--bay), var(--gg-red));
+      color: white;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-avatar {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .header-info { flex: 1; }
+    .header-info h2 { font-size: 1.05rem; font-weight: 700; }
+    .header-info .header-sub {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      margin-top: 2px;
+    }
+
+    .online-dot {
+      width: 8px; height: 8px;
+      background: #2ecc71;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+      box-shadow: 0 0 6px #2ecc71;
+    }
+
+    #switch-btn {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-family: inherit;
+      font-weight: 500;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    #switch-btn:hover { background: rgba(255,255,255,0.28); }
+
+    /* Messages */
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 20px;
+      background: var(--fog);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      scroll-behavior: smooth;
+    }
+
+    #messages::-webkit-scrollbar { width: 5px; }
+    #messages::-webkit-scrollbar-track { background: transparent; }
+    #messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+    .msg-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      animation: fadeUp 0.25s ease;
+    }
+
+    .msg-row.user { flex-direction: row-reverse; }
+
+    .msg-avatar {
+      width: 32px; height: 32px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .msg-row.ai   .msg-avatar { background: linear-gradient(135deg, var(--bay), var(--sky)); }
+    .msg-row.user .msg-avatar { background: linear-gradient(135deg, var(--gg-red), var(--gg-orange)); }
+
+    .msg-bubble {
+      max-width: 72%;
+      padding: 13px 16px;
+      border-radius: 18px;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    .msg-row.ai .msg-bubble {
+      background: var(--bubble-ai);
+      color: var(--text);
+      border-bottom-left-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .msg-row.user .msg-bubble {
+      background: linear-gradient(135deg, var(--gg-red), var(--gg-orange));
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+
+    .msg-row.typing .msg-bubble {
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-style: italic;
+      border-bottom-left-radius: 4px;
+    }
+
+    .msg-time {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 4px;
+      padding: 0 4px;
+    }
+
+    .msg-row.user .msg-time { text-align: right; }
+
+    .msg-col { display: flex; flex-direction: column; }
+    .msg-row.user .msg-col { align-items: flex-end; }
+
+    /* Typing dots */
+    .typing-dots span {
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: var(--muted);
+      border-radius: 50%;
+      margin: 0 2px;
+      animation: bounce 1.2s infinite;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+    /* Input area */
+    #input-area {
+      display: flex;
+      gap: 10px;
+      padding: 16px 20px;
+      background: white;
+      border-top: 1px solid var(--border);
+      align-items: flex-end;
+    }
+
+    #message-input {
+      flex: 1;
+      padding: 13px 16px;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      resize: none;
+      max-height: 130px;
+      color: var(--text);
+      background: var(--sand);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      line-height: 1.5;
+    }
+
+    #message-input:focus {
+      border-color: var(--gg-red);
+      box-shadow: 0 0 0 4px rgba(192,57,43,0.08);
+      background: white;
+    }
+
+    #message-input::placeholder { color: #aab4be; }
+
+    #send-btn {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--gg-red), var(--gg-orange));
+      color: white;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s, transform 0.1s;
+      box-shadow: 0 4px 12px rgba(192,57,43,0.3);
+      flex-shrink: 0;
+    }
+
+    #send-btn:hover:not(:disabled)  { opacity: 0.9; transform: translateY(-1px); }
+    #send-btn:active:not(:disabled) { transform: translateY(0); }
+    #send-btn:disabled { background: #c5cdd6; box-shadow: none; cursor: not-allowed; }
+
+    /* Day divider */
+    .day-divider {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      position: relative;
+      margin: 4px 0;
+    }
+
+    .day-divider::before, .day-divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 38%;
+      height: 1px;
+      background: var(--border);
+    }
+    .day-divider::before { left: 0; }
+    .day-divider::after  { right: 0; }
+
+    /* Info button */
+    #info-btn {
+      width: 34px; height: 34px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    #info-btn:hover { background: rgba(255,255,255,0.32); }
+
+    /* Modal overlay */
+    #info-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(28,42,58,0.55);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      animation: fadeUp 0.2s ease;
+    }
+    #info-modal.open { display: flex; }
+
+    .modal-box {
+      background: white;
+      border-radius: 20px;
+      padding: 36px 32px 28px;
+      max-width: 460px;
+      width: 90%;
+      box-shadow: 0 8px 40px rgba(28,42,58,0.18);
+      position: relative;
+      animation: fadeUp 0.25s ease;
+    }
+
+    .modal-box h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .modal-box h3 .modal-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--bay), var(--gg-red));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .modal-section {
+      margin-bottom: 18px;
+    }
+
+    .modal-section h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--gg-red);
+      margin-bottom: 6px;
+    }
+
+    .modal-section p, .modal-section li {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .modal-section ul {
+      padding-left: 18px;
+    }
+
+    .modal-section li { margin-bottom: 4px; }
+
+    .modal-tip {
+      background: var(--sky-light);
+      border-left: 3px solid var(--sky);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      color: var(--bay);
+      line-height: 1.5;
+    }
+
+    .modal-close {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: linear-gradient(135deg, var(--gg-red), var(--gg-orange));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .modal-close:hover { opacity: 0.9; }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 60%, 100% { transform: translateY(0); }
+      30%            { transform: translateY(-6px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Setup Screen -->
+  <div id="setup">
+    <div class="setup-icon">
+        <svg width="40" height="32" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- water -->
+          <rect x="0" y="38" width="80" height="12" fill="rgba(255,255,255,0.25)" rx="2"/>
+          <!-- left shore -->
+          <rect x="0" y="30" width="10" height="8" fill="white"/>
+          <!-- right shore -->
+          <rect x="70" y="30" width="10" height="8" fill="white"/>
+          <!-- road deck -->
+          <rect x="0" y="32" width="80" height="3" fill="white"/>
+          <!-- left tower -->
+          <rect x="17" y="8" width="5" height="24" fill="white"/>
+          <!-- left tower crossbeam -->
+          <rect x="14" y="18" width="11" height="2.5" fill="white"/>
+          <!-- right tower -->
+          <rect x="58" y="8" width="5" height="24" fill="white"/>
+          <!-- right tower crossbeam -->
+          <rect x="55" y="18" width="11" height="2.5" fill="white"/>
+          <!-- main cable left side -->
+          <path d="M5 32 Q19.5 10 40 14 Q60.5 10 75 32" stroke="white" stroke-width="2" fill="none"/>
+          <!-- hanger cables left span -->
+          <line x1="26" y1="17" x2="26" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="31" y1="15" x2="31" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="36" y1="14" x2="36" y2="33" stroke="white" stroke-width="1"/>
+          <!-- hanger cables right span -->
+          <line x1="44" y1="14" x2="44" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="49" y1="15" x2="49" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="54" y1="17" x2="54" y2="33" stroke="white" stroke-width="1"/>
+        </svg>
+      </div>
+    <h1>San Francisco Chaperone</h1>
+    <p class="subtitle">Your AI guide for exploring San Francisco.<br>Enter your name to get started.</p>
+    <div class="input-group">
+      <span class="input-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#aab4be" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </span>
+      <input type="text" id="name-input" placeholder="Your name" autocomplete="off" />
+    </div>
+    <button class="btn-primary" onclick="startChat()">Start Chatting →</button>
+  </div>
+
+  <!-- Chat Screen -->
+  <div id="chat-container">
+    <div id="chat-header">
+      <div class="header-avatar">
+        <svg width="34" height="26" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="38" width="80" height="12" fill="rgba(255,255,255,0.25)" rx="2"/>
+          <rect x="0" y="30" width="10" height="8" fill="white"/>
+          <rect x="70" y="30" width="10" height="8" fill="white"/>
+          <rect x="0" y="32" width="80" height="3" fill="white"/>
+          <rect x="17" y="8" width="5" height="24" fill="white"/>
+          <rect x="14" y="18" width="11" height="2.5" fill="white"/>
+          <rect x="58" y="8" width="5" height="24" fill="white"/>
+          <rect x="55" y="18" width="11" height="2.5" fill="white"/>
+          <path d="M5 32 Q19.5 10 40 14 Q60.5 10 75 32" stroke="white" stroke-width="2" fill="none"/>
+          <line x1="26" y1="17" x2="26" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="31" y1="15" x2="31" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="36" y1="14" x2="36" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="44" y1="14" x2="44" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="49" y1="15" x2="49" y2="33" stroke="white" stroke-width="1"/>
+          <line x1="54" y1="17" x2="54" y2="33" stroke="white" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="header-info">
+        <h2>San Francisco Chaperone</h2>
+        <div class="header-sub"><span class="online-dot"></span><span id="chat-subtitle">Ready to help</span></div>
+      </div>
+      <button id="switch-btn" onclick="switchStudent()">Switch Student</button>
+      <button id="info-btn" onclick="openInfo()" title="How it works">ℹ</button>
+    </div>
+
+    <div id="messages">
+      <div class="day-divider">Today</div>
+    </div>
+
+    <div id="input-area">
+      <textarea id="message-input" placeholder="Ask about activities, schedule, weather…" rows="1"></textarea>
+      <button id="send-btn" onclick="sendMessage()" title="Send">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Info Modal -->
+  <div id="info-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="closeInfoOnOverlay(event)">
+    <div class="modal-box">
+      <h3 id="modal-title">
+        <span class="modal-icon">ℹ</span>
+        About San Francisco Chaperone
+      </h3>
+
+      <div class="modal-section">
+        <h4>What is this?</h4>
+        <p>An AI-powered guide for high school students on a field trip to San Francisco. Ask anything about the itinerary, activities, local weather, or school policies.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>How to use it</h4>
+        <ul>
+          <li>Type your question in the chat box and press <strong>Enter</strong> (or click ➤).</li>
+          <li>The assistant remembers your conversation — follow-up questions work naturally.</li>
+          <li>Try asking about weather, the schedule, what to pack, or activity options.</li>
+          <li>You can submit feedback about activities — the chaperone will remember it.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h4>When you're done</h4>
+        <p>Click <strong>Switch Student</strong> in the top-right corner. This clears the current conversation so the next student can start fresh. The session only lasts while the app is running — all history is reset on restart.</p>
+      </div>
+
+      <div class="modal-tip">
+        💡 <strong>Tip:</strong> Use <strong>Shift + Enter</strong> to add a new line in your message without sending it.
+      </div>
+
+      <button class="modal-close" onclick="closeInfo()">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    function openInfo()  { document.getElementById('info-modal').classList.add('open'); }
+    function closeInfo() { document.getElementById('info-modal').classList.remove('open'); }
+    function closeInfoOnOverlay(e) { if (e.target === document.getElementById('info-modal')) closeInfo(); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeInfo(); });
+
+    const AVATAR_AI   = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"/><path d="M9 12l2 2 4-4"/></svg>`;
+    const AVATAR_USER = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
+
+    const nameInput = document.getElementById('name-input');
+    nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') startChat(); });
+    nameInput.focus();
+
+    function startChat() {
+      const name = nameInput.value.trim();
+      if (!name) { nameInput.focus(); return; }
+      studentName = name;
+      document.getElementById('setup').style.display = 'none';
+      const container = document.getElementById('chat-container');
+      container.style.display = 'flex';
+      document.getElementById('chat-subtitle').textContent = `Chatting as ${studentName}`;
+      document.getElementById('message-input').focus();
+      sendToApi(`Hi, my name is ${studentName}`, true);
+    }
+
+    function switchStudent() {
+      studentName = '';
+      document.getElementById('messages').innerHTML = '<div class="day-divider">Today</div>';
+      document.getElementById('chat-container').style.display = 'none';
+      document.getElementById('setup').style.display = 'block';
+      nameInput.value = '';
+      nameInput.focus();
+    }
+
+    const messageInput = document.getElementById('message-input');
+    messageInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+    });
+    messageInput.addEventListener('input', () => {
+      messageInput.style.height = 'auto';
+      messageInput.style.height = Math.min(messageInput.scrollHeight, 130) + 'px';
+    });
+
+    function now() {
+      return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function appendMessage(text, type) {
+      const messages = document.getElementById('messages');
+
+      const row = document.createElement('div');
+      row.className = `msg-row ${type}`;
+
+      const avatar = document.createElement('div');
+      avatar.className = 'msg-avatar';
+      avatar.innerHTML = type === 'user' ? AVATAR_USER : AVATAR_AI;
+
+      const col = document.createElement('div');
+      col.className = 'msg-col';
+
+      const bubble = document.createElement('div');
+      bubble.className = 'msg-bubble';
+
+      if (type === 'typing') {
+        bubble.innerHTML = '<span class="typing-dots"><span></span><span></span><span></span></span>';
+      } else {
+        bubble.textContent = text;
+        const time = document.createElement('div');
+        time.className = 'msg-time';
+        time.textContent = now();
+        col.appendChild(bubble);
+        col.appendChild(time);
+      }
+
+      if (type === 'typing') col.appendChild(bubble);
+
+      row.appendChild(avatar);
+      row.appendChild(col);
+      messages.appendChild(row);
+      messages.scrollTop = messages.scrollHeight;
+      return row;
+    }
+
+    async function sendMessage() {
+      const text = messageInput.value.trim();
+      if (!text) return;
+      messageInput.value = '';
+      messageInput.style.height = 'auto';
+      await sendToApi(text, false);
+    }
+
+    async function sendToApi(text, isGreeting) {
+      if (!isGreeting) appendMessage(text, 'user');
+
+      const sendBtn = document.getElementById('send-btn');
+      sendBtn.disabled = true;
+      messageInput.disabled = true;
+
+      const typingRow = appendMessage('', 'typing');
+
+      try {
+        const res = await fetch('/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ studentName, message: text })
+        });
+        const data = await res.json();
+        typingRow.remove();
+        appendMessage(data.response, 'ai');
+      } catch {
+        typingRow.remove();
+        appendMessage('Something went wrong. Please try again.', 'ai');
+      } finally {
+        sendBtn.disabled = false;
+        messageInput.disabled = false;
+        messageInput.focus();
+      }
+    }
+  </script>
+</body>
+</html>

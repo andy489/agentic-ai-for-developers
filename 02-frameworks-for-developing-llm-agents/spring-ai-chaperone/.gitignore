@@ -1,0 +1,18 @@
+/build
+/bin
+
+# Secrets
+.env
+
+# Hidden directories (covers .gradle, .idea, .vscode, etc.)
+.*/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*

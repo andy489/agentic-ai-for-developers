@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-ai-chaperone
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:dummy-key}
+
+chaperone:
+  weather-url: https://api.weather.gov/gridpoints/MTR/85,106/forecast/hourly
