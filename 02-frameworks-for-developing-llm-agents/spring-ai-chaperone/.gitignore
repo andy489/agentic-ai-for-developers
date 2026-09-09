@@ -4,8 +4,11 @@
 # Secrets
 .env
 
-# Hidden directories (covers .gradle, .idea, .vscode, etc.)
+# Hidden directories (covers .gradle, .idea, .vscode, .claude, etc.)
 .*/
+
+# AI assistant
+CLAUDE.md
 
 # Compiled class files
 *.class
