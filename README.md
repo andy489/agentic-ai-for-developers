@@ -70,7 +70,7 @@ cp .env.example .env && poetry install && poetry run returns-refunds-flow
 
 - [Frameworks for Developing LLM Agents](02-frameworks-for-developing-llm-agents/frameworks-for-developing-llm-agents.ipynb)
 
-### spring-ai-chaperone
+### [spring-ai-chaperone](02-frameworks-for-developing-llm-agents/spring-ai-chaperone)
 
 A Spring Boot + Spring AI web app acting as an AI chaperone for high school students on a field trip to San Francisco. Students chat with the AI to get activity suggestions tailored to their schedule, weather, school policies, and personal preferences.
 
