@@ -7,9 +7,6 @@
 # Hidden directories (covers .gradle, .idea, .vscode, .claude, etc.)
 .*/
 
-# IDE / tooling
-CLAUDE.md
-
 # Compiled class files
 *.class
 

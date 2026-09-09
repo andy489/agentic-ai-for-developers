@@ -1,6 +1,5 @@
 # IDE / tooling
-.claude/
-CLAUDE.md
+.*/
 
 # Python
 __pycache__/
