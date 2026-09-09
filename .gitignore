@@ -1,8 +1,8 @@
 # IDE / tooling
 .*/
-CLAUDE.md
-SPEC.MD
-SPEC.ENV
+[A-Z][A-Z]*.md
+!README.md
+[A-Z][A-Z]*.ENV
 
 # Python
 __pycache__/
