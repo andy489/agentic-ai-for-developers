@@ -7,7 +7,7 @@
 # Hidden directories (covers .gradle, .idea, .vscode, .claude, etc.)
 .*/
 
-# AI assistant
+# IDE / tooling
 CLAUDE.md
 
 # Compiled class files
