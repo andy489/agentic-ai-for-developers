@@ -5,6 +5,5 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     description="A framework for fine-tuning LLMs with multiple adapter techniques.",
-    author="cckuailong",
     license="Apache-2.0",
 )
