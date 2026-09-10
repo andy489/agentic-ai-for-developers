@@ -1,0 +1,38 @@
+# Core ML and AI libraries
+torch>=2.14.0
+transformers>=4.57.6
+datasets>=5.0.1
+accelerate>=1.15.0
+peft>=0.20.0
+trl>=1.13.0
+
+# Data processing
+pandas>=3.0.5
+numpy>=2.5.3
+scipy>=1.18.1
+
+# Database connectivity
+pymysql>=1.2.0
+
+# Web interface (optional)
+fastapi>=0.141.1
+uvicorn>=0.52.4
+gradio>=6.26.0
+
+# Utilities
+tqdm>=4.70.0
+requests>=2.34.2
+huggingface-hub>=1.30.0
+
+# OpenAI SDK
+openai>=3.11.0
+python-dotenv>=1.2.3
+
+# Privacy / PII
+presidio-analyzer>=2.2.364
+presidio-anonymizer>=2.2.364
+
+# Optional: For advanced features
+# bitsandbytes>=0.50.2  # For 4/8-bit quantization
+# wandb>=0.15.0         # For experiment tracking
+# tensorboard>=2.13.0   # For training visualization

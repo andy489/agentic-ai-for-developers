@@ -1,0 +1,145 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+.env.*
+
+# API keys and credentials
+*secret*
+*key*
+*password*
+*credential*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Model files and checkpoints (too large for GitHub)
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.model
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Model directories
+models/
+checkpoints/
+output/
+logs/
+wandb/
+
+# Data files
+*.csv
+*.json
+*.jsonl
+*.parquet
+*.arrow
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Dataset directories
+dataset/
+data/
+datasets/
+
+# Cache directories
+.cache/
+cache/
+__pycache__/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.out
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Large files that shouldn't be in version control
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Hugging Face cache
+.cache/
+huggingface/
+
+# Weights & Biases
+wandb/
+
+# TensorBoard logs
+runs/
+logs/
+
+# CUDA
+*.cubin
+*.fatbin
+*.ptx
+
+# Specific to this project
+Section3/mistral7b_fitness_llm_finetuned/
+Section4/models/
+Section4/dataset/
+Section4/logs/
+Section4/feedback_log.json
