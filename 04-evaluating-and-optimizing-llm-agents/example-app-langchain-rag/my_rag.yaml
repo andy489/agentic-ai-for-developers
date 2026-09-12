@@ -1,0 +1,14 @@
+evaluator:
+  type: TRECEvaluator
+  model:
+    type: OpenAIModel
+    name: gpt-4o
+    api_key: ${oc.env:OPENAI_API_KEY}
+results_folder: scored_results
+generated_answers: "rag_results.csv"
+eval_results_file: eval_results.csv
+metrics_file: metrics.png
+metrics:
+  - answer_relevancy
+  - hallucination
+  - citation_accuracy
