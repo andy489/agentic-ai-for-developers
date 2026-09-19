@@ -1,0 +1,15 @@
+Use dependency injection for modular architecture.
+Avoid shared mutable state in concurrent systems.
+Validate input data at boundaries.
+Write unit tests for edge cases.
+Use async IO for high latency operations.
+Prefer composition over inheritance.
+Follow SOLID design principles.
+Keep functions small and single-purpose.
+Write descriptive commit messages.
+Document public APIs and complex logic.
+Fail fast and handle errors explicitly.
+Avoid premature optimization.
+Use type hints for readability and safety.
+Log meaningful events for observability.
+Secure sensitive data and secrets.

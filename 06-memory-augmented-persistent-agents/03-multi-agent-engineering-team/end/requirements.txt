@@ -1,0 +1,19 @@
+python-dotenv==1.1.0
+rich>=13.5.0
+colorama==0.4.6
+openai>=1.8.0.             # OpenAI API
+langsmith>=0.0.1            # LangSmith for tracing and debugging
+langchain>=0.0.200         # LangChain framework
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+langchain>=1.0.0
+langchain-community>=0.0.15
+langchain-text-splitters>=0.1.9
+langchain-core>=0.0.10
+langchain-openai>=0.0.15
+langgraph>=0.0.12
+typing-extensions>=4.7.1
+getpass4
+pytest>=8.0.0
+pytest-mock>=3.12.0
+chromadb>=0.5.0
