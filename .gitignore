@@ -4,6 +4,12 @@
 !README.md
 [A-Z][A-Z]*.ENV
 
+# Model / LoRA training artifacts
+*-lora/
+*-lora-*/
+*/checkpoint-*/
+feedback_buffer.jsonl
+
 # Python
 __pycache__/
 *.py[cod]
