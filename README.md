@@ -14,6 +14,7 @@ Hands-on course material for building AI agents.
 | [06 — Memory-Augmented Persistent Agents](06-memory-augmented-persistent-agents) | Memory types (episodic/semantic/procedural), short-term buffers, long-term vector stores, summarization/pruning/caching, multi-agent memory sharing | Python · LangChain · LangGraph · ChromaDB · LangSmith |
 | [07 — Event-Driven Agentic AI](07-event-driven-agentic-ai) | Event-driven architecture, Kafka/NATS/Event Hubs, sagas, outbox pattern, idempotency, event-native agent design, human-in-the-loop, observability, security | Python · Kafka · NATS · Azure Event Hubs · Semantic Kernel · LangChain |
 | [08 — Agentic Knowledge Graphs](08-agentic-knowledge-graphs) | Knowledge graph foundations, entities/relationships/ontologies/schemas, graph traversal, LPG vs. RDF, Cypher/SPARQL, LLM+graph integration, hybrid retrieval, production pipelines, governance | Python · Neo4j · RDF · TypeDB · LangChain |
+| [09 — ChatGPT AI Agents Lab](09-chat-gpt-ai-agents-lab) | RTCF prompting, tool schemas, local tool execution (calculator, KB lookup), multi-turn agent loop with Chat Completions API | Python · OpenAI |
 
 ## Quick Start
 
