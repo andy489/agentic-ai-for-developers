@@ -1,0 +1,651 @@
+query,generated_answer,passage_id,passage,context,g_eval
+What is the basal metabolic rate for a 150-pound male and female?,"The basal metabolic rate for a 150-pound male is approximately 1,800 calories per day, and for a 150-pound female, it would be around the same, at 1,800 calories per day.",0,"### Basal Metabolic Rate by Weight and Birth Gender
+
+Basal metabolic rate (BMR) varies by gender, weight, and age. Here's a general estimate of typical daily basal calorie requirements for adults by birth gender (male and female) and by weight in increments of 10 pounds from 100 to 250 lbs. Please note that these are rough estimates, and individual BMR can vary based on factors like muscle mass, activity level, and genetics. These values assume a sedentary lifestyle:
+
+**Male:**
+
+- 100 lbs: ~1,200 calories
+- 110 lbs: ~1,320 calories
+- 120 lbs: ~1,440 calories
+- 130 lbs: ~1,560 calories
+- 140 lbs: ~1,680 calories
+- 150 lbs: ~1,800 calories
+- 160 lbs: ~1,920 calories
+- 170 lbs: ~2,040 calories
+- 180 lbs: ~2,160 calories
+- 190 lbs: ~2,280 calories
+- 200 lbs: ~2,400 calories
+- 210 lbs: ~2,520 calories
+- 220 lbs: ~2,640 calories
+- 230 lbs: ~2,760 calories
+- 240 lbs: ~2,880 calories
+- 250 lbs: ~3,000 calories
+
+**Female:**","### Basal Metabolic Rate by Weight and Birth Gender
+
+Basal metabolic rate (BMR) varies by gender, weight, and age. Here's a general estimate of typical daily basal calorie requirements for adults by birth gender (male and female) and by weight in increments of 10 pounds from 100 to 250 lbs. Please note that these are rough estimates, and individual BMR can vary based on factors like muscle mass, activity level, and genetics. These values assume a sedentary lifestyle:
+
+**Male:**
+
+- 100 lbs: ~1,200 calories
+- 110 lbs: ~1,320 calories
+- 120 lbs: ~1,440 calories
+- 130 lbs: ~1,560 calories
+- 140 lbs: ~1,680 calories
+- 150 lbs: ~1,800 calories
+- 160 lbs: ~1,920 calories
+- 170 lbs: ~2,040 calories
+- 180 lbs: ~2,160 calories
+- 190 lbs: ~2,280 calories
+- 200 lbs: ~2,400 calories
+- 210 lbs: ~2,520 calories
+- 220 lbs: ~2,640 calories
+- 230 lbs: ~2,760 calories
+- 240 lbs: ~2,880 calories
+- 250 lbs: ~3,000 calories
+
+**Female:** ### Calories and Carbohydrates per 100 grams for Common Fruits and Vegetables:
+
+Please note that the values are approximate and can vary depending on the specific variety and how the food is prepared.
+It's always a good idea to check the nutritional labels on packaged foods and consult with a registered dietitian for more precise information. ### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Ap","Score: 5  
+Rationale: The answer correctly states the BMR for a 150-pound male as 1,800 calories, but it inaccurately claims the same BMR for a female without providing the necessary context or data for females, which is missing from the provided context."
+Which fruits and vegetables have less than 30 calories per 100 grams?,"Fruits and vegetables that have fewer than 30 calories per 100 grams include:
+
+- Spinach: Approximately 23 calories
+- Tomatoes: Approximately 18 calories
+- Lettuce: Approximately 5 calories
+
+These options are great for adding volume to your meals without significantly increasing calorie intake.",1,"- Apples: Approximately 52 calories and 14 grams of carbohydrates.
+- Bananas: Approximately 89 calories and 23 grams of carbohydrates.
+- Carrots: Approximately 41 calories and 10 grams of carbohydrates.
+- Broccoli: Approximately 31 calories and 7 grams of carbohydrates.
+- Spinach: Approximately 23 calories and 4 grams of carbohydrates.
+- Tomatoes: Approximately 18 calories and 4 grams of carbohydrates.
+- Potatoes: Approximately 77 calories and 20 grams of carbohydrates.
+- Onions: Approximately 40 calories and 10 grams of carbohydrates.
+- Strawberries: Approximately 32 calories and 7 grams of carbohydrates.
+- Blueberries: Approximately 57 calories and 14 grams of carbohydrates.
+- Grapes: Approximately 69 calories and 18 grams of carbohydrates.
+- Peaches: Approximately 39 calories and 9 grams of carbohydrates.
+- Bell Peppers: Approximately 31 calories and 6 grams of carbohydrates.
+- Lettuce: Approximately 5 calories and 1 gram of carbohydrates.","- Apples: Approximately 52 calories and 14 grams of carbohydrates.
+- Bananas: Approximately 89 calories and 23 grams of carbohydrates.
+- Carrots: Approximately 41 calories and 10 grams of carbohydrates.
+- Broccoli: Approximately 31 calories and 7 grams of carbohydrates.
+- Spinach: Approximately 23 calories and 4 grams of carbohydrates.
+- Tomatoes: Approximately 18 calories and 4 grams of carbohydrates.
+- Potatoes: Approximately 77 calories and 20 grams of carbohydrates.
+- Onions: Approximately 40 calories and 10 grams of carbohydrates.
+- Strawberries: Approximately 32 calories and 7 grams of carbohydrates.
+- Blueberries: Approximately 57 calories and 14 grams of carbohydrates.
+- Grapes: Approximately 69 calories and 18 grams of carbohydrates.
+- Peaches: Approximately 39 calories and 9 grams of carbohydrates.
+- Bell Peppers: Approximately 31 calories and 6 grams of carbohydrates.
+- Lettuce: Approximately 5 calories and 1 gram of carbohydrates. ### Calories and Carbohydrates per 100 grams for Common Fruits and Vegetables:
+
+Please note that the values are approximate and can vary depending on the specific variety and how the food is prepared.
+It's always a good idea to check the nutritional labels on packaged foods and consult with a registered dietitian for more precise information. Note that the specific availability of these fruits and vegetables can vary based on your location and climate,
+so it's a good idea to check with local farmers' markets or grocery stores for the mos","Score: 10  
+Rationale: The answer accurately identifies the fruits and vegetables from the provided context that have fewer than 30 calories per 100 grams, demonstrating relevance, accuracy, and groundedness."
+When are strawberries and asparagus typically in season?,"Strawberries and asparagus typically come into season during the spring, specifically from March to May. This is when you can expect these fruits and vegetables to be at their freshest and most flavorful. Enjoy incorporating them into your meals during that time for a delicious and nutritious boost!",2,"### Top 50 fresh fruits and vegetables organized by their typical harvest season:
+
+#### Spring (March - May):
+
+1. Strawberries
+2. Asparagus
+3. Peas
+4. Spinach
+5. Radishes
+6. Lettuce
+7. Artichokes
+8. Rhubarb
+9. Broccoli
+10. Carrots
+
+#### Summer (June - August):
+
+11. Tomatoes
+12. Blueberries
+13. Watermelon
+14. Corn
+15. Zucchini
+16. Cucumbers
+17. Bell peppers
+18. Peaches
+19. Cherries
+20. Raspberries
+
+#### Early Fall (September - October):
+
+21. Apples
+22. Grapes
+23. Pears
+24. Plums
+25. Eggplant
+26. Green beans
+27. Cabbage
+28. Cauliflower
+29. Sweet potatoes
+30. Pumpkins
+
+#### Late Fall (November - December):
+
+31. Cranberries
+32. Brussels sprouts
+33. Kale
+34. Butternut squash
+35. Beets
+36. Broccoli rabe
+37. Persimmons
+38. Radicchio
+39. Turnips
+40. Winter squash
+
+#### Winter (January - February):
+
+41. Citrus fruits (oranges, grapefruits, lemons, limes)
+42. Kiwi
+43. Pineapples
+44. Mangoes
+45. Avocados
+46. Bananas
+47. Papayas
+48. Guavas
+49. Fennel
+50. Dates","### Top 50 fresh fruits and vegetables organized by their typical harvest season:
+
+#### Spring (March - May):
+
+1. Strawberries
+2. Asparagus
+3. Peas
+4. Spinach
+5. Radishes
+6. Lettuce
+7. Artichokes
+8. Rhubarb
+9. Broccoli
+10. Carrots
+
+#### Summer (June - August):
+
+11. Tomatoes
+12. Blueberries
+13. Watermelon
+14. Corn
+15. Zucchini
+16. Cucumbers
+17. Bell peppers
+18. Peaches
+19. Cherries
+20. Raspberries
+
+#### Early Fall (September - October):
+
+21. Apples
+22. Grapes
+23. Pears
+24. Plums
+25. Eggplant
+26. Green beans
+27. Cabbage
+28. Cauliflower
+29. Sweet potatoes
+30. Pumpkins
+
+#### Late Fall (November - December):
+
+31. Cranberries
+32. Brussels sprouts
+33. Kale
+34. Butternut squash
+35. Beets
+36. Broccoli rabe
+37. Persimmons
+38. Radicchio
+39. Turnips
+40. Winter squash
+
+#### Winter (January - February):
+
+41. Citrus fruits (oranges, grapefruits, lemons, limes)
+42. Kiwi
+43. Pineapples
+44. Mangoes
+45. Avocados
+46. Bananas
+47. Papayas
+48. Guavas
+49. Fennel
+50. Dates ### Calories and Carbohydrates per 100 grams for Common Fruits and Vegetables:
+
+Please note that the values are approximate and can vary depending on the specific variety and how the food is prepared.
+It's always a good idea to check the nutritional labels on packaged foods and consult with a registered dietitian for more precise information. ### Basal Metabolic Rate by Weight and Birth Gender
+
+Basal metabolic rate (BMR) varies by gender, weight, and age. Here's a general estimate of typical daily basal calorie requirements for adu","Score: 10  
+Rationale: The answer accurately identifies the season for strawberries and asparagus as spring (March to May), aligning perfectly with the provided context."
+What does the Day 2 dinner meal plan include?,"On Day 2 of the dinner meal plan, Baked Salmon with a lemon-dill sauce is included. It is served with steamed broccoli and a side of sweet potato. Enjoy your nutritious meal! If you have any more questions or need further assistance, feel free to ask.",3,"**Day 4: Mediterranean Chickpea Bowl**
+- Chickpeas roasted with olive oil, garlic, and spices.
+- Serve over a bed of spinach, with diced cucumber, cherry tomatoes, and feta cheese. Drizzle with tahini dressing.
+
+**Day 5: Beef and Broccoli**
+- Lean beef stir-fried with broccoli and a homemade sauce (low-sodium soy sauce, garlic, ginger, and honey).
+- Serve with quinoa or whole wheat noodles.
+
+**Day 6: Roasted Vegetable Pasta**
+- Whole wheat pasta with roasted cherry tomatoes, zucchini, bell peppers, and red onion.
+- Toss with a light olive oil and herb sauce, and top with grated Parmesan cheese.
+
+**Day 7 (Cheat Day): Your Favorite Indulgence**
+- Enjoy your favorite meal, whether it's pizza, burgers, or something sweet.
+- Remember to practice portion control and enjoy it guilt-free!
+
+**Day 8: Grilled Shrimp Tacos**
+- Grilled shrimp with taco seasoning, served in whole wheat tortillas.
+- Top with shredded lettuce, diced tomatoes, avocado slices, and a yogurt-based cilantro-lime sauce.","**Day 4: Mediterranean Chickpea Bowl**
+- Chickpeas roasted with olive oil, garlic, and spices.
+- Serve over a bed of spinach, with diced cucumber, cherry tomatoes, and feta cheese. Drizzle with tahini dressing.
+
+**Day 5: Beef and Broccoli**
+- Lean beef stir-fried with broccoli and a homemade sauce (low-sodium soy sauce, garlic, ginger, and honey).
+- Serve with quinoa or whole wheat noodles.
+
+**Day 6: Roasted Vegetable Pasta**
+- Whole wheat pasta with roasted cherry tomatoes, zucchini, bell peppers, and red onion.
+- Toss with a light olive oil and herb sauce, and top with grated Parmesan cheese.
+
+**Day 7 (Cheat Day): Your Favorite Indulgence**
+- Enjoy your favorite meal, whether it's pizza, burgers, or something sweet.
+- Remember to practice portion control and enjoy it guilt-free!
+
+**Day 8: Grilled Shrimp Tacos**
+- Grilled shrimp with taco seasoning, served in whole wheat tortillas.
+- Top with shredded lettuce, diced tomatoes, avocado slices, and a yogurt-based cilantro-lime sauce. ### Meal Plan
+
+Here's a healthy dinner meal plan for a week with whole foods and one cheat day included.
+Remember to adjust portion sizes and ingredients based on your dietary preferences and caloric needs.
+
+### Outline Summary
+1. Day 1: Grilled Chicken Salad
+2. Day 2: Baked Salmon
+3. Day 3: Vegetarian Stir-Fry
+4. Day 4: Mediterranean Chickpea Bowl
+5. Day 5: Beef and Broccoli
+6. Day 6: Roasted Vegetable Pasta7
+7. Day 7 (Cheat Day): Your Favorite Indulgence
+8. Day 8: Grilled Shrimp Tacos
+
+### Full P","Score: 9  
+Rationale: The answer accurately describes the Day 2 dinner meal plan, including the main dish and sides, and is consistent with the provided context."
+Name three fruits and three vegetables that are grown locally in Washington state.,"Three fruits that are grown locally in Washington state are apples, cherries, and blueberries. As for vegetables, you can find asparagus, peas, and spinach grown locally in Washington state. Enjoy the fresh produce!",4,"### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Apples (Washington is famous for its apple orchards)
+2. Cherries (particularly in the Yakima Valley)
+3. Pears
+4. Peaches
+5. Plums
+6. Blueberries
+7. Raspberries
+8. Strawberries
+9. Blackberries
+10. Grapes (used for wine production as well)
+11. Apricots
+12. Cranberries (especially in the Long Beach Peninsula)
+13. Kiwi
+14. Huckleberries (in certain regions)
+15. Nectarines
+
+#### Vegetables:","### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Apples (Washington is famous for its apple orchards)
+2. Cherries (particularly in the Yakima Valley)
+3. Pears
+4. Peaches
+5. Plums
+6. Blueberries
+7. Raspberries
+8. Strawberries
+9. Blackberries
+10. Grapes (used for wine production as well)
+11. Apricots
+12. Cranberries (especially in the Long Beach Peninsula)
+13. Kiwi
+14. Huckleberries (in certain regions)
+15. Nectarines
+
+#### Vegetables: Note that the specific availability of these fruits and vegetables can vary based on your location and climate,
+so it's a good idea to check with local farmers' markets or grocery stores for the most accurate information on
+seasonal produce in your area. ### Top 50 fresh fruits and vegetables organized by their typical harvest season:
+
+#### Spring (March - May):
+
+1. Strawberries
+2. Asparagus
+3. Peas
+4. Spinach
+5. Radishes
+6. Lettuce
+7. Artichokes
+8. Rhubarb
+9. Broccoli
+10. Carrots
+
+#### Summer (June - August):
+
+11. Tomatoes
+12. Blueberries
+13. Watermelon
+14. Corn
+15. Zucchini
+16. Cucumbers
+17. Bell peppers
+18. Peaches
+19. Cherries
+20. Raspberries
+
+#### Early Fall (September - October):
+
+21. Apples
+22. Grapes
+23. Pears
+24. Plums
+25. Eggplant
+26. Green beans
+27. Cabbage
+28. Cauliflower
+29. Sweet potatoes
+30. Pumpkins
+
+#### Late Fall (November - December):
+
+31. Cranberries
+32. ","Score: 10  
+Rationale: The answer accurately lists three fruits and three vegetables that are grown locally in Washington state, aligning perfectly with the provided context."
+How many carbohydrates are in a banana and a potato per 100 grams?,"In 100 grams of a banana, there are approximately 23 grams of carbohydrates. For a potato, in 100 grams, there are approximately 20 grams of carbohydrates.",5,"- Apples: Approximately 52 calories and 14 grams of carbohydrates.
+- Bananas: Approximately 89 calories and 23 grams of carbohydrates.
+- Carrots: Approximately 41 calories and 10 grams of carbohydrates.
+- Broccoli: Approximately 31 calories and 7 grams of carbohydrates.
+- Spinach: Approximately 23 calories and 4 grams of carbohydrates.
+- Tomatoes: Approximately 18 calories and 4 grams of carbohydrates.
+- Potatoes: Approximately 77 calories and 20 grams of carbohydrates.
+- Onions: Approximately 40 calories and 10 grams of carbohydrates.
+- Strawberries: Approximately 32 calories and 7 grams of carbohydrates.
+- Blueberries: Approximately 57 calories and 14 grams of carbohydrates.
+- Grapes: Approximately 69 calories and 18 grams of carbohydrates.
+- Peaches: Approximately 39 calories and 9 grams of carbohydrates.
+- Bell Peppers: Approximately 31 calories and 6 grams of carbohydrates.
+- Lettuce: Approximately 5 calories and 1 gram of carbohydrates.","- Apples: Approximately 52 calories and 14 grams of carbohydrates.
+- Bananas: Approximately 89 calories and 23 grams of carbohydrates.
+- Carrots: Approximately 41 calories and 10 grams of carbohydrates.
+- Broccoli: Approximately 31 calories and 7 grams of carbohydrates.
+- Spinach: Approximately 23 calories and 4 grams of carbohydrates.
+- Tomatoes: Approximately 18 calories and 4 grams of carbohydrates.
+- Potatoes: Approximately 77 calories and 20 grams of carbohydrates.
+- Onions: Approximately 40 calories and 10 grams of carbohydrates.
+- Strawberries: Approximately 32 calories and 7 grams of carbohydrates.
+- Blueberries: Approximately 57 calories and 14 grams of carbohydrates.
+- Grapes: Approximately 69 calories and 18 grams of carbohydrates.
+- Peaches: Approximately 39 calories and 9 grams of carbohydrates.
+- Bell Peppers: Approximately 31 calories and 6 grams of carbohydrates.
+- Lettuce: Approximately 5 calories and 1 gram of carbohydrates. ### Calories and Carbohydrates per 100 grams for Common Fruits and Vegetables:
+
+Please note that the values are approximate and can vary depending on the specific variety and how the food is prepared.
+It's always a good idea to check the nutritional labels on packaged foods and consult with a registered dietitian for more precise information. ### Basal Metabolic Rate by Weight and Birth Gender
+
+Basal metabolic rate (BMR) varies by gender, weight, and age. Here's a general estimate of typical daily basal calorie requirements for adults by","Score: 10  
+Rationale: The answer accurately and concisely provides the carbohydrate content for both a banana and a potato per 100 grams, directly aligning with the provided context."
+What produce is available from Washington farmers in late fall?,"In Washington state during the late fall months (November - December), you can typically find the following fruits and vegetables in season:
+
+1. Cranberries
+2. Brussels sprouts
+3. Kale
+4. Butternut squash
+5. Beets
+6. Broccoli rabe
+7. Persimmons
+8. Radicchio
+9. Turnips
+10. Winter squash
+
+These seasonal produce items are commonly available from local farmers during the late fall months in Washington state. Enjoy the freshness and flavors of these fall harvests!",6,"### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Apples (Washington is famous for its apple orchards)
+2. Cherries (particularly in the Yakima Valley)
+3. Pears
+4. Peaches
+5. Plums
+6. Blueberries
+7. Raspberries
+8. Strawberries
+9. Blackberries
+10. Grapes (used for wine production as well)
+11. Apricots
+12. Cranberries (especially in the Long Beach Peninsula)
+13. Kiwi
+14. Huckleberries (in certain regions)
+15. Nectarines
+
+#### Vegetables:","### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Apples (Washington is famous for its apple orchards)
+2. Cherries (particularly in the Yakima Valley)
+3. Pears
+4. Peaches
+5. Plums
+6. Blueberries
+7. Raspberries
+8. Strawberries
+9. Blackberries
+10. Grapes (used for wine production as well)
+11. Apricots
+12. Cranberries (especially in the Long Beach Peninsula)
+13. Kiwi
+14. Huckleberries (in certain regions)
+15. Nectarines
+
+#### Vegetables: Washington state's diverse climate and topography allow for the cultivation of a wide variety of produce throughout the year. Depending on the region within the state, you may find certain crops more readily available during different seasons. Be sure to visit local farmers' markets and support your local farmers to enjoy the freshest, seasonal produce in Washington. ### Calories and Carbohydrates per 100 grams for Common Fruits and Vegetables:
+
+Please note that the values are approximate and can vary depending on the specific variety and how the food is prepared.
+It's always a good idea to check the nutritional labels on packaged foods and consult with a registered dietitian for more precise information. Note that the specific availability of these fruits and vegetables can vary based on your location and climate,
+so it's a good idea to check with local farmers' markets or ","Score: 8  
+Rationale: The answer is mostly relevant and accurate, listing several produce items available in late fall in Washington, but it could be improved by directly referencing the context provided, such as mentioning apples or pears, which are also available in late fall."
+What meal is recommended for Day 3 in the healthy meal plan?,"The recommended meal for Day 3 in the healthy meal plan is a Vegetarian Stir-Fry. It consists of tofu or tempeh stir-fried with bell peppers, broccoli, snap peas, and a low-sodium teriyaki sauce, served over brown rice or cauliflower rice. Enjoy your delicious and nutritious meal!",7,"### Meal Plan
+
+Here's a healthy dinner meal plan for a week with whole foods and one cheat day included.
+Remember to adjust portion sizes and ingredients based on your dietary preferences and caloric needs.
+
+### Outline Summary
+1. Day 1: Grilled Chicken Salad
+2. Day 2: Baked Salmon
+3. Day 3: Vegetarian Stir-Fry
+4. Day 4: Mediterranean Chickpea Bowl
+5. Day 5: Beef and Broccoli
+6. Day 6: Roasted Vegetable Pasta7
+7. Day 7 (Cheat Day): Your Favorite Indulgence
+8. Day 8: Grilled Shrimp Tacos
+
+### Full Plan
+
+**Day 1: Grilled Chicken Salad**
+- Grilled chicken breast with mixed greens, cherry tomatoes, cucumbers, and a balsamic vinaigrette dressing.
+- Side of quinoa or brown rice.
+
+**Day 2: Baked Salmon**
+- Baked salmon with a lemon-dill sauce.
+- Steamed broccoli and a side of sweet potato.
+
+**Day 3: Vegetarian Stir-Fry**
+- Tofu or tempeh stir-fried with bell peppers, broccoli, snap peas, and a low-sodium teriyaki sauce.
+- Serve over brown rice or cauliflower rice.","### Meal Plan
+
+Here's a healthy dinner meal plan for a week with whole foods and one cheat day included.
+Remember to adjust portion sizes and ingredients based on your dietary preferences and caloric needs.
+
+### Outline Summary
+1. Day 1: Grilled Chicken Salad
+2. Day 2: Baked Salmon
+3. Day 3: Vegetarian Stir-Fry
+4. Day 4: Mediterranean Chickpea Bowl
+5. Day 5: Beef and Broccoli
+6. Day 6: Roasted Vegetable Pasta7
+7. Day 7 (Cheat Day): Your Favorite Indulgence
+8. Day 8: Grilled Shrimp Tacos
+
+### Full Plan
+
+**Day 1: Grilled Chicken Salad**
+- Grilled chicken breast with mixed greens, cherry tomatoes, cucumbers, and a balsamic vinaigrette dressing.
+- Side of quinoa or brown rice.
+
+**Day 2: Baked Salmon**
+- Baked salmon with a lemon-dill sauce.
+- Steamed broccoli and a side of sweet potato.
+
+**Day 3: Vegetarian Stir-Fry**
+- Tofu or tempeh stir-fried with bell peppers, broccoli, snap peas, and a low-sodium teriyaki sauce.
+- Serve over brown rice or cauliflower rice. ### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Apples (Washington is famous for its apple orchards)
+2. Cherries (particularly in the Yakima Valley)
+3. Pears
+4. Peaches
+5. Plums
+6. Blueberries
+7. Raspberries
+8. Strawberries
+9. Blackberries
+10. Grapes (used for wine production as well)
+11. Apricots
+12. Cranberries (especially in the Long Beach Peninsu","Score: 10  
+Rationale: The answer accurately and completely identifies the recommended meal for Day 3, matching the provided context with precise details."
+What is a typical daily calorie requirement for a 200-pound female?,"It's great that you're considering the daily calorie requirements for a 200-pound female. Remember, factors like activity level, metabolism, and health goals play a significant role in determining the appropriate calorie intake. Consulting with a healthcare provider or nutritionist can help personalize your calorie needs to best suit your individual requirements. If you have any specific questions or need further guidance on this topic, feel free to ask!",8,"- 100 lbs: ~1,000 calories
+- 110 lbs: ~1,100 calories
+- 120 lbs: ~1,200 calories
+- 130 lbs: ~1,300 calories
+- 140 lbs: ~1,400 calories
+- 150 lbs: ~1,500 calories
+- 160 lbs: ~1,600 calories
+- 170 lbs: ~1,700 calories
+- 180 lbs: ~1,800 calories
+- 190 lbs: ~1,900 calories
+- 200 lbs: ~2,000 calories
+- 210 lbs: ~2,100 calories
+- 220 lbs: ~2,200 calories
+- 230 lbs: ~2,300 calories
+- 240 lbs: ~2,400 calories
+- 250 lbs: ~2,500 calories
+
+Again, these are just rough estimates. To get a more accurate picture of your daily calorie needs, it's best to consult with a registered dietitian or use a BMR calculator that takes into account more detailed information about your individual characteristics and activity level.","- 100 lbs: ~1,000 calories
+- 110 lbs: ~1,100 calories
+- 120 lbs: ~1,200 calories
+- 130 lbs: ~1,300 calories
+- 140 lbs: ~1,400 calories
+- 150 lbs: ~1,500 calories
+- 160 lbs: ~1,600 calories
+- 170 lbs: ~1,700 calories
+- 180 lbs: ~1,800 calories
+- 190 lbs: ~1,900 calories
+- 200 lbs: ~2,000 calories
+- 210 lbs: ~2,100 calories
+- 220 lbs: ~2,200 calories
+- 230 lbs: ~2,300 calories
+- 240 lbs: ~2,400 calories
+- 250 lbs: ~2,500 calories
+
+Again, these are just rough estimates. To get a more accurate picture of your daily calorie needs, it's best to consult with a registered dietitian or use a BMR calculator that takes into account more detailed information about your individual characteristics and activity level. ### Basal Metabolic Rate by Weight and Birth Gender
+
+Basal metabolic rate (BMR) varies by gender, weight, and age. Here's a general estimate of typical daily basal calorie requirements for adults by birth gender (male and female) and by weight in increments of 10 pounds from 100 to 250 lbs. Please note that these are rough estimates, and individual BMR can vary based on factors like muscle mass, activity level, and genetics. These values assume a sedentary lifestyle:
+
+**Male:**
+
+- 100 lbs: ~1,200 calories
+- 110 lbs: ~1,320 calories
+- 120 lbs: ~1,440 calories
+- 130 lbs: ~1,560 calories
+- 140 lbs: ~1,680 calories
+- 150 lbs: ~1,800 calories
+- 160 lbs: ~1,920 calories
+- 170 lbs: ~2,040 calories
+- 180 lbs: ~2,160 calories
+- 190 lbs: ~2,280 calories
+- 200 lbs: ~2,400 calories
+- 210 ","Score: 3  
+Rationale: The answer fails to provide a specific calorie requirement for a 200-pound female, which is directly available in the provided context, and instead offers general advice without addressing the question accurately."
+List three herbs that are grown in Washington state.,"Those three herbs commonly grown in Washington state are mint, thyme, and rosemary. They thrive in the climate of Washington and can be easily incorporated into your culinary creations. If you have any more questions or need further information, feel free to ask!",9,"### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Apples (Washington is famous for its apple orchards)
+2. Cherries (particularly in the Yakima Valley)
+3. Pears
+4. Peaches
+5. Plums
+6. Blueberries
+7. Raspberries
+8. Strawberries
+9. Blackberries
+10. Grapes (used for wine production as well)
+11. Apricots
+12. Cranberries (especially in the Long Beach Peninsula)
+13. Kiwi
+14. Huckleberries (in certain regions)
+15. Nectarines
+
+#### Vegetables:","### Washington State Local Produce
+
+Washington state is known for its rich agricultural production. Here's a list of the types of produce that are commonly available from local farmers in Washington state:
+
+#### Fruits:
+
+1. Apples (Washington is famous for its apple orchards)
+2. Cherries (particularly in the Yakima Valley)
+3. Pears
+4. Peaches
+5. Plums
+6. Blueberries
+7. Raspberries
+8. Strawberries
+9. Blackberries
+10. Grapes (used for wine production as well)
+11. Apricots
+12. Cranberries (especially in the Long Beach Peninsula)
+13. Kiwi
+14. Huckleberries (in certain regions)
+15. Nectarines
+
+#### Vegetables: Washington state's diverse climate and topography allow for the cultivation of a wide variety of produce throughout the year. Depending on the region within the state, you may find certain crops more readily available during different seasons. Be sure to visit local farmers' markets and support your local farmers to enjoy the freshest, seasonal produce in Washington. ### Calories and Carbohydrates per 100 grams for Common Fruits and Vegetables:
+
+Please note that the values are approximate and can vary depending on the specific variety and how the food is prepared.
+It's always a good idea to check the nutritional labels on packaged foods and consult with a registered dietitian for more precise information. ### Basal Metabolic Rate by Weight and Birth Gender
+
+Basal metabolic rate (BMR) varies by gender, weight, and age. Here's a general estimate of typical daily basal calorie ","Score: 8  
+Rationale: The answer is relevant and accurate, listing three herbs that are indeed commonly grown in Washington state, although the context provided does not specifically mention herbs."

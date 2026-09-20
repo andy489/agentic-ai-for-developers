@@ -1,0 +1,13 @@
+azure-functions==1.20.0
+
+langchain-core==1.2.2
+langchain-openai==1.1.6
+langsmith==0.3.45
+
+# Allow pip to select a compatible community build (your index has 0.4.1 available)
+langchain-community==0.4.1
+
+autogen-agentchat==0.4.6
+autogen-ext==0.4.6
+
+azure-identity==1.17.1

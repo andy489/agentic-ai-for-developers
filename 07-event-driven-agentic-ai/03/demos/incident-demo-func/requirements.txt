@@ -1,0 +1,11 @@
+azure-functions
+
+# LangChain
+langchain>=0.3
+langchain-community>=0.3
+langchain-openai>=1.0.1
+
+# AutoGen AgentChat + Azure/OpenAI extensions
+autogen-agentchat
+autogen-ext[openai,azure]
+azure-identity

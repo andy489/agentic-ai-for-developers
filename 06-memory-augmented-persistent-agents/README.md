@@ -36,7 +36,7 @@ Hands-on material covering why memory matters for agentic AI, how to compare per
 - **Optimization** — rolling summarization (~70% token savings), pruning (~40%), prompt caching (~50%), selective retrieval
 - **Multi-agent memory sharing** — all agents read/write the same vector store; task results persisted across sessions
 
-## Workflow Architecture (Module 03)
+## Workflow Architecture (03-multi-agent-engineering-team)
 
 ```
 User Task
@@ -89,7 +89,7 @@ LANGSMITH_PROJECT=memory-agents-demo
 # Jupyter notebooks (modules 01 and 02)
 jupyter notebook
 
-# Multi-agent CLI demo (module 03)
+# Multi-agent CLI demo (03-multi-agent-engineering-team)
 cd 03-multi-agent-engineering-team/end
 python3 main.py
 

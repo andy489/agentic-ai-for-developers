@@ -11,14 +11,14 @@ Measuring agent quality, building custom metrics, and observing RAG pipelines in
 | Part 1 — Measuring Agent Quality | DeepEval live scoring, LLM-as-a-Judge (G-Eval), custom metrics, multi-judge averaging |
 | Part 2 — From Custom Metrics to Production | Open-RAG-Eval, LangSmith tracing, cost/latency visualisation |
 
-## Example App
+## Demo App
 
-### example-app-langchain-rag
+### demo-1 — LangChain + Streamlit RAG
 
 A LangChain + Streamlit RAG application used throughout the module as the evaluation target.
 
 ```bash
-cd example-app-langchain-rag
+cd demo-1
 /opt/homebrew/bin/python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -U pip
@@ -40,7 +40,7 @@ Then run the Streamlit app:
 streamlit run streamlit_app.py
 ```
 
-See [example-app-langchain-rag/README.md](example-app-langchain-rag/README.md) for full setup, evaluation pipeline, and example queries.
+See [demo-1/README.md](demo-1/README.md) for full setup, evaluation pipeline, and example queries.
 
 ## Requirements
 

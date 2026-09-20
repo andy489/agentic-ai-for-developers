@@ -14,10 +14,10 @@ A four-section Python project covering the full domain-specific LLM lifecycle.
 
 | Section | Topic |
 |---|---|
-| `section1` | Compare a telecom-domain model (`TSLAM-4B`) against `Llama-2-7b-chat-hf` |
-| `section2` | Clean and annotate a DCGM GPU metrics CSV for training |
-| `section3` | LoRA fine-tune `Mistral-7B-Instruct-v0.3` on a fitness & nutrition dataset |
-| `section4` | Privacy-preserving feedback loop — anonymise PII, build dataset, update model |
+| `demo-1` | Compare a telecom-domain model (`TSLAM-4B`) against `Llama-2-7b-chat-hf` |
+| `demo-2` | Clean and annotate a DCGM GPU metrics CSV for training |
+| `demo-3` | LoRA fine-tune `Mistral-7B-Instruct-v0.3` on a fitness & nutrition dataset |
+| `demo-4` | Privacy-preserving feedback loop — anonymise PII, build dataset, update model |
 
 ```bash
 cd domain-specific-llm-agents
@@ -31,5 +31,5 @@ See [domain-specific-llm-agents/README.md](domain-specific-llm-agents/README.md)
 ## Requirements
 
 - Python 3.8+
-- CUDA-compatible GPU recommended (sections 3 and 4)
+- CUDA-compatible GPU recommended (demos 3 and 4)
 - `OPENAI_API_KEY` or Hugging Face token as needed — copy `domain-specific-llm-agents/env.example` to `.env`
